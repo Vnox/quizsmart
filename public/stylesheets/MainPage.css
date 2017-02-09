@@ -151,9 +151,11 @@ ul.topnav li.icon {display: none;}
 }
 
 .inputbox {
+
     padding-bottom: 20px;
     margin-right: 20px;
-    /*width: 100%;*/
+    width: 100%;
+    min-width: 1080px;
     text-align: center;
     box-sizing: border-box;
     border: solid 5px #c9c9c9;
@@ -162,6 +164,7 @@ ul.topnav li.icon {display: none;}
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 }
+
 
 .nameinput p {
     font-family: 'Aldrich';
