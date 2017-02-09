@@ -1,0 +1,251 @@
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #72A4FF;
+}
+
+ul.topnav img{
+    padding: 12px;
+    padding-top: 16px;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 15px;
+    font-family: 'Aldrich';
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #BFD6FF;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    background-color: #fff;
+    font-family: 'Aldrich';
+    margin-bottom: 15px;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 12px;
+}
+
+.activeIcon {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.cardheader {
+    text-align: center;
+    padding: 15px;
+    padding-top: 19px;
+    color: #fff;
+    background-color: #C6DDFF;
+    font-size: 22px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+
+.cardheader p{
+    margin: 0px;
+}
+
+.addnewbutton {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 0px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    color: #fff;
+    background-color: #C6DDFF;
+    font-size: 22px;
+    border-radius: 5px;
+    font-family: 'Aldrich';
+    margin-top: 15px;
+}
+
+.addnewbutton p {
+    margin: 0px;
+}
+
+.addnewbutton a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.schedulebutton {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 0px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    color: #4C7BD0;
+    background-color: #FFF;
+    font-size: 22px;
+    border-radius: 5px;
+    font-family: 'Aldrich';
+    margin-top: 15px;
+}
+
+.schedulebutton p {
+    margin: 0px;
+}
+
+.schedulebutton a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.inputbox {
+    padding-bottom: 20px;
+    margin-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 5px #c9c9c9;
+    transition: border 0.3s;
+    border-color: #C6DDFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+.nameinput p {
+    font-family: 'Aldrich';
+    padding-left: 5px;
+    padding-top:15px;
+    padding-bottom: 10px;
+    margin: 0;
+    color: #fff;
+
+  
+}
+
+.quizcard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 0px;
+    padding-bottom: 10px;
+    color: #4C7BD0;
+    background-color: #FFF;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: 'Aldrich';
+    margin-top: 15px;
+}
+
+.quizheader{
+    text-align: center;
+    padding: 15px;
+    padding-top: 19px;
+    color: #fff;
+    background-color: #C6DDFF;
+    font-size: 22px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+} .quizheader p {
+    margin: 0px;
+}
+
+.quizquestion {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.answerbutton {
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 0px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: #72A4FF;
+    font-size: 22px;
+    border-radius: 5px;
+    font-family: 'Aldrich';
+    margin-top: 15px;
+
+} .answerbutton a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+
+
+body {
+    background-color: #4C7BD0; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
