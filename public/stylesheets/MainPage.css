@@ -153,10 +153,8 @@ ul.topnav li.icon {display: none;}
 .inputbox {
 
     padding-bottom: 20px;
-    margin-right: 20px;
-    width: 100%;
-    min-width: 100%;
-    background-size: 100%;
+    
+    width:100%;
     text-align: center;
     box-sizing: border-box;
     border: solid 5px #c9c9c9;
@@ -211,7 +209,7 @@ ul.topnav li.icon {display: none;}
 }
 
 .answerbutton {
-     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     text-align: center;
     padding: 0px;
     padding-top: 16px;
