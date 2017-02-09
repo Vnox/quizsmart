@@ -228,6 +228,13 @@ ul.topnav li.icon {display: none;}
   text-decoration: inherit; /* no underline */
 }
 
+.dummytext {
+    color: #fff;
+    text-align: center;
+    font-family: 'Aldrich';
+    padding: 20px;
+    font-size: 25px;
+}
 
 
 body {

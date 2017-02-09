@@ -11,10 +11,12 @@
 
 <body>
 
+
+
 <ul class="topnav" id="myTopnav">
   <li><img src="https://s3.amazonaws.com/quizsmart/QuizSmartIcon.png" alt="Logo" style="width:100px;height:17px;"></li>
   <li><a href="index">My Quizzes</a></li>
-  <li><a href="#settings">Settings</a></li>
+  <li><a href="settings">Settings</a></li>
   <li class="icon">
     <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
   </li>
@@ -26,7 +28,7 @@
 </ul>
 
 <div class="schedulebutton">
-  <p><a href="#schedule"><b> SCHEDULE </b></a></p>
+  <p><a href="schedule"><b> SCHEDULE </b></a></p>
 </div>
 
 <div class="nameinput">
@@ -43,7 +45,8 @@
 	<p>Which Egyptian woman was considered as the inventor of agriculture? She married her brother and together they had a son: Horus.</p>
 </div>
 <div class="answerbutton"> 
-	<a href="#answershowed"><b> Show Answer </b></a>
+	<a href="#answershowed" onclick="myFunction()"><b> Show Answer </b></a>
+	
 </div>
 
 
@@ -65,6 +68,7 @@
 
 
 <script src="/javascripts/MainPage.js"></script>
+<script> function myFunction() {  alert("Answer Showed");}</script>
 
 </body>
 </html>
