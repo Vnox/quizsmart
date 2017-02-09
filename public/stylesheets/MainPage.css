@@ -155,7 +155,8 @@ ul.topnav li.icon {display: none;}
     padding-bottom: 20px;
     margin-right: 20px;
     width: 100%;
-    min-width: 1080px;
+    min-width: 50px;
+    background-size: 100%;
     text-align: center;
     box-sizing: border-box;
     border: solid 5px #c9c9c9;
