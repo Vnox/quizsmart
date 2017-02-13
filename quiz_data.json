@@ -2,39 +2,36 @@
   "quizset": [
     {
       "name": "COGS 101A",
-      "status": "activate",
-      "num_question": "4",
+      "status": "active",
+      "num_question": "1",
       "questions": [
         {
-          "q_text": "this is question 1.",
-          "a_text": "this is answer 1"
+          "q_text": "What is the name of a place that uses telescopes and other scientific equipment to research space and astronomy?",
+          "a_text": "An Observatory"
         }
       ]
     },
     {
       "name": "COGS 101B",
-      "status": "inactivate",
-      "num_question": "8",
+      "status": null,
+      "num_question": "5",
       "questions": [
         {
-          "q_text": "this is question 1.",
-          "a_text": "this is answer 1"
+          "q_text": "What is the name of NASA’s most famous space telescope?",
+          "a_text": "Hubble Space Telescope"
         },
         {
-          "q_text": "this is question 2.",
-          "a_text": "this is answer 2"
+          "q_text": "What is the name of the 2nd biggest planet in our solar system?",
+          "a_text": "Saturn"
         },{
-          "q_text": "this is question 3.",
-          "a_text": "this is answer 3"
+          "q_text": "The sixth planet from the Sun features an extensive ring system, what is the name of this planet?",
+          "a_text": "Saturn"
         },{
-          "q_text": "this is question 4.",
-          "a_text": "this is answer 4"
+          "q_text": "The chemical element uranium was named after what planet?",
+          "a_text": "Uranus"
         },{
-          "q_text": "this is question 5.",
-          "a_text": "this is answer 5"
-        },{
-          "q_text": "this is question 6.",
-          "a_text": "this is answer 6"
+          "q_text": "Dummy Question 5",
+          "a_text": "Answer 5"
         }
       ]
     }

@@ -236,6 +236,10 @@ ul.topnav li.icon {display: none;}
     font-size: 25px;
 }
 
+.cardwrapper {
+    all:initial;
+}
+
 
 body {
     background-color: #4C7BD0; 
