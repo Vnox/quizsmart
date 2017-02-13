@@ -54,6 +54,28 @@
   
 </div>
 
+{{#each quizset}}
+  <div class="card">
+
+  <div class="cardheader">
+  <p><b>{{name}}</b></p>
+  </div>
+  <div class="container"> 
+    <p> <b>{{num_question}}</b> Questions in set. <br> <b>Preview:
+    </b> {{#if this.questions.[0]}} {{this.questions.[0].q_text}} {{else}} No questions in set, please click to add : ) {{/if}} 
+    <br> {{#if this.questions.[1]}} {{this.questions.[1].q_text}} {{/if}}  
+    <br> {{#if this.questions.[2]}} {{this.questions.[2].q_text}} {{/if}} 
+    <br> {{#if this.questions.[3]}} click to view more ... {{/if}} 
+
+    </p> 
+  </div>
+  <img class= "activeIcon" src="https://s3.amazonaws.com/quizsmart/InactiveIcon.png" alt="Avatar" style="width:90px; height:20px">
+  
+</div>
+{{/each}}
+
+
+
 
 <div class="addnewbutton">
   <p><a href="addnewquiz"><b> Add New Quiz Set </b></a></p>
