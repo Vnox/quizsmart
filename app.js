@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/index', index.view);
 app.get('/', index.view);
-app.get('/addnewquiz', addnewquiz.view);
+app.get('/addnewquiz', addnewquiz.showQuizSet);
 app.get('/settings', settings.view);
 app.get('/schedule', schedule.view);
 // Example route

@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
@@ -26,4 +28,5 @@ function myFunction() {
 function cardClick(e) {
 	e.preventDefault();
 	console.log("Clicked.");
+	console.log($(this).text());
 }

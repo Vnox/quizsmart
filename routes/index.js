@@ -9,3 +9,7 @@ exports.view = function(req, res){
   res.render('index', data);
 };
 
+exports.showQuizSet = function(req, res){
+	console.log("Showing quizzes");
+	res.render('index', data);
+}
