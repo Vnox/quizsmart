@@ -1,3 +1,15 @@
+'use strict';
+
+// Call this function when the page loads (the "ready" event)
+$(document).ready(function() {
+	initializePage();
+})
+
+function initializePage() {
+	console.log("Javascript connected!");
+	$(".cardwrapper").click(cardClick);
+}
+
 function dummyAnswer() {  alert("Answer Showed");}
 
 function myFunction() {
@@ -9,3 +21,9 @@ function myFunction() {
     }
 }
 
+
+
+function cardClick(e) {
+	e.preventDefault();
+	console.log("Clicked.");
+}
