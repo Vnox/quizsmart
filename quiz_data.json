@@ -1,0 +1,42 @@
+{
+  "quizset": [
+    {
+      "name": "COGS 101A",
+      "status": "activate",
+      "num_question": "4",
+      "questions": [
+        {
+          "q_text": "this is question 1.",
+          "a_text": "this is answer 1"
+        }
+      ]
+    },
+    {
+      "name": "COGS 101B",
+      "status": "inactivate",
+      "num_question": "8",
+      "questions": [
+        {
+          "q_text": "this is question 1.",
+          "a_text": "this is answer 1"
+        },
+        {
+          "q_text": "this is question 2.",
+          "a_text": "this is answer 2"
+        },{
+          "q_text": "this is question 3.",
+          "a_text": "this is answer 3"
+        },{
+          "q_text": "this is question 4.",
+          "a_text": "this is answer 4"
+        },{
+          "q_text": "this is question 5.",
+          "a_text": "this is answer 5"
+        },{
+          "q_text": "this is question 6.",
+          "a_text": "this is answer 6"
+        }
+      ]
+    }
+  ]
+}
