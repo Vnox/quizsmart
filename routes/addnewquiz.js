@@ -16,5 +16,7 @@ exports.addNewQuiz = function(req, res) {
 
 exports.showQuizSet = function(req, res){
 	console.log("Showing quizzes");
+	//var parsed = JSON.parse(data);
+	console.log("Testing data : " + data.quizset[1].questions[0].q_text);
 	res.render('addnewquiz', data);
 }

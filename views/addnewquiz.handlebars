@@ -37,7 +37,7 @@
 </div>
 
 
-<div class="quizcard">
+<!-- <div class="quizcard">
 <div class="quizheader">
 	<p><b>Question 1</b></p>
 </div>
@@ -64,17 +64,31 @@
 	<a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
 </div>
 
+</div> -->
+
+{{#each quizset.[1].questions}}
+
 </div>
 
-{{#each quizset}}
+<div class="quizcard">
+<div class="quizheader">
+  <p><b>Question</b></p>
+</div>
+<div class="quizquestion">
+  <p>{{this.q_text}}</p>
+</div>
+<div class="answerbutton"> 
+  <a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
+</div>
 
+</div>
 
 
 {{/each}}
 
-
-<script src="/javascripts/MainPage.js"></script>
 <script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/MainPage.js"></script>
+
 
 
 </body>

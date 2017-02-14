@@ -29,4 +29,6 @@ function cardClick(e) {
 	e.preventDefault();
 	console.log("Clicked.");
 	console.log($(this).text());
+	
 }
+
