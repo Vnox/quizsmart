@@ -16,5 +16,4 @@ exports.showQuizSet = function(req, res){
 	console.log(req)
 	console.log(index)
 	res.render('addnewquiz', data.quizset[index]);
-
 }

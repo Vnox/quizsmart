@@ -36,6 +36,9 @@
   <input type="text" name="fname" class="inputbox">
 </div>
 
+<div class="answerbutton" id="sabutton"> 
+  <a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
+</div>
 
 
 {{#each questions}}
@@ -46,11 +49,12 @@
 <div class="quizheader">
   <p><b>Question {{@index}}</b></p>
 </div>
-<div class="quizquestion">
+<div id="quizquestion" class="quizquestion">
   <p>{{this.q_text}}</p>
+  <p name="answer" class="answer">{{this.a_text}}</p>
 </div>
 <div class="answerbutton"> 
-  <a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
+  <a href="#edit" onclick=""><b> Edit </b></a>
 </div>
 
 </div>

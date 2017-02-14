@@ -240,6 +240,16 @@ ul.topnav li.icon {display: none;}
 }
 
 
+.answer {
+    text-align: center;
+    opacity: 0.0;
+}
+
+.showed {
+    color: #C66;
+     text-align: center;
+    opacity: 1.0;
+}
 
 
 body {
