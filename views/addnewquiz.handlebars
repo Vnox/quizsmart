@@ -37,42 +37,14 @@
 </div>
 
 
-<!-- <div class="quizcard">
-<div class="quizheader">
-	<p><b>Question 1</b></p>
-</div>
-<div class="quizquestion">
-	<p>Which Egyptian woman was considered as the inventor of agriculture? She married her brother and together they had a son: Horus.</p>
-</div>
-<div class="answerbutton"> 
-	<a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
-	
-</div>
 
-
+{{#each questions}}
 
 </div>
 
 <div class="quizcard">
 <div class="quizheader">
-	<p><b>Question 2</b></p>
-</div>
-<div class="quizquestion">
-	<p>Which company was establised in the year 1962 by Sam Walton and is one of the biggest employers in the world?</p>
-</div>
-<div class="answerbutton"> 
-	<a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
-</div>
-
-</div> -->
-
-{{#each quizset.[1].questions}}
-
-</div>
-
-<div class="quizcard">
-<div class="quizheader">
-  <p><b>Question</b></p>
+  <p><b>Question {{@index}}</b></p>
 </div>
 <div class="quizquestion">
   <p>{{this.q_text}}</p>
@@ -82,7 +54,6 @@
 </div>
 
 </div>
-
 
 {{/each}}
 

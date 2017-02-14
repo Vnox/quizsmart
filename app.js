@@ -7,6 +7,7 @@ var index = require('./routes/index');
 var addnewquiz = require('./routes/addnewquiz');
 var settings = require('./routes/settings');
 var schedule = require('./routes/schedule');
+var actualshow = require('./routes/actualshow');
 // Example route
 // var user = require('./routes/user');
 
@@ -41,6 +42,12 @@ app.get('/', index.view);
 app.get('/addnewquiz', addnewquiz.showQuizSet);
 app.get('/settings', settings.view);
 app.get('/schedule', schedule.view);
+app.get('/actualshow1', actualshow.show1);
+app.get('/actualshow2', actualshow.show2);
+app.get('/actualshow3', actualshow.show3);
+app.get('/actualshow4', actualshow.show4);
+app.get('/actualshow5', actualshow.show5);
+
 // Example route
 // app.get('/users', user.list);
 

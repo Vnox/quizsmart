@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("Javascript connected!");
-	$(".cardwrapper").click(cardClick);
+	//$(".cardwrapper").click(cardClick);
 }
 
 function dummyAnswer() {  alert("Answer Showed");}
@@ -29,6 +29,7 @@ function cardClick(e) {
 	e.preventDefault();
 	console.log("Clicked.");
 	console.log($(this).text());
+
 	
 }
 
