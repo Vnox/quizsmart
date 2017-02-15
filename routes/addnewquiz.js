@@ -2,6 +2,7 @@
 /*
  * GET home page.
  */
+
 var data = require("../quiz_data.json");
 
 
@@ -15,5 +16,7 @@ exports.showQuizSet = function(req, res){
 	var index = req.query.index;
 	console.log(req)
 	console.log(index)
-	res.render('addnewquiz', data.quizset[index]);
+	delete require.cache[require.resolve('../quiz_data.json')];
+	data = require("../quiz_data.json");
+	res.render('/', data.quizset[index]);
 }

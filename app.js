@@ -8,6 +8,7 @@ var addnewquiz = require('./routes/addnewquiz');
 var settings = require('./routes/settings');
 var schedule = require('./routes/schedule');
 var actualshow = require('./routes/actualshow');
+var managequestion = require('./routes/managequestion');
 // Example route
 // var user = require('./routes/user');
 
@@ -47,6 +48,11 @@ app.get('/actualshow2', actualshow.show2);
 app.get('/actualshow3', actualshow.show3);
 app.get('/actualshow4', actualshow.show4);
 app.get('/actualshow5', actualshow.show5);
+app.get('/ques/:id/:set', function(req, res){
+    console.log( "question is " + req.params.id );
+    console.log( "set is " + req.params.set );
+    managequestion.show( req.params.set, req.params.id, req, res );
+});
 
 // Example route
 // app.get('/users', user.list);

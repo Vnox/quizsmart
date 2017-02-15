@@ -36,12 +36,14 @@
   <input type="text" name="fname" class="inputbox">
 </div>
 
-<div class="answerbutton" id="sabutton"> 
-  <a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
+<div class="answerbutton toggle" id="sabutton"> 
+  <a href="#answershowed" onclick="dummyAnswer()"><b> Toggle Answer </b></a>
 </div>
 
 
 {{#each questions}}
+
+{{#if this}}
 
 </div>
 
@@ -54,12 +56,16 @@
   <p name="answer" class="answer">{{this.a_text}}</p>
 </div>
 <div class="answerbutton"> 
-  <a href="#edit" onclick=""><b> Edit </b></a>
+  <a href={{qurl}} onclick=""><b> Delete </b></a>
 </div>
 
 </div>
-
+{{/if}}
 {{/each}}
+
+<div class="answerbutton toggle new" id="newbutton"> 
+  <a href="#new" "><b> Add Question </b></a>
+</div>
 
 <script src="/javascripts/jquery.min.js"></script>
 <script src="/javascripts/MainPage.js"></script>

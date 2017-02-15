@@ -18,7 +18,6 @@ function dummyAnswer() {
   for (var i = 0; i < x.length; i++) {
     if(x[i].className === "showed"){
   	x[i].className = "answer";
-  	y.value = "AAA"
   }else{
   	x[i].className = "showed";
 
@@ -36,7 +35,7 @@ function dummyAnswer() {
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
-        x.className += "responsive";
+        x.className += " responsive";
     } else {
         x.className = "topnav";
     }

@@ -251,6 +251,14 @@ ul.topnav li.icon {display: none;}
     opacity: 1.0;
 }
 
+.toggle {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.new{
+    background-color: #89E4A3;
+}
 
 body {
     background-color: #4C7BD0; 
