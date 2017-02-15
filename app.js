@@ -53,6 +53,7 @@ app.get('/ques/:id/:set', function(req, res){
     console.log( "set is " + req.params.set );
     managequestion.show( req.params.set, req.params.id, req, res );
 });
+
 app.get('/adding1', function(req, res){
     managequestion.adding( 1, req, res );
 });

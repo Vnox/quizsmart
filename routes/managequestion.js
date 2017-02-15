@@ -31,7 +31,7 @@ exports.show = function(set, num, req, res){
 }
 
 exports.adding = function(set, req, res){
-	
+
 	console.log("add called for " + set);
 	fs = require('fs');
 	var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
@@ -61,3 +61,10 @@ exports.adding = function(set, req, res){
 	res.redirect(jumpurl);
 
 }
+
+
+exports.changedate = function(req, res){
+	console.log('change date called');
+	
+}
+

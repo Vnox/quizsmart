@@ -25,10 +25,6 @@ function dummyAnswer() {
 
 }
   
-
-
-
-
  //alert("Answer Showed");
 }
 
@@ -51,3 +47,7 @@ function cardClick(e) {
 	
 }
 
+function toggleColor(){
+	var x =  document.getElementsByName("answer");
+	x.className += '';
+}
