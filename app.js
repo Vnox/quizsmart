@@ -53,6 +53,21 @@ app.get('/ques/:id/:set', function(req, res){
     console.log( "set is " + req.params.set );
     managequestion.show( req.params.set, req.params.id, req, res );
 });
+app.get('/adding1', function(req, res){
+    managequestion.adding( 1, req, res );
+});
+app.get('/adding2', function(req, res){
+    managequestion.adding( 2, req, res );
+});
+app.get('/adding3', function(req, res){
+    managequestion.adding( 3, req, res );
+});
+app.get('/adding4', function(req, res){
+    managequestion.adding( 4, req, res );
+});
+app.get('/adding5', function(req, res){
+    managequestion.adding( 5, req, res );
+});
 
 // Example route
 // app.get('/users', user.list);
