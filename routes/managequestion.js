@@ -65,6 +65,49 @@ exports.adding = function(set, req, res){
 
 exports.changedate = function(req, res){
 	console.log('change date called');
-	
+
 }
+
+exports.sendmsg = function(req, res){
+
+	console.log('Sending Msg');
+	var https = require('https');
+
+	var data = JSON.stringify({
+ 		api_key: '8f91433f',
+ 		api_secret: 'a448a3c3e2c5ea0b',
+ 		to: '18587661874',
+ 		from: '12034089845',
+ 		text: 'Hello from quizsmart, It\'s time to take your quiz now : )'
+	});
+
+	var options = {
+ 	host: 'rest.nexmo.com',
+ 	path: '/sms/json',
+ 	port: 443,
+ 	method: 'POST',
+ 	headers: {
+   'Content-Type': 'application/json',
+   'Content-Length': Buffer.byteLength(data)
+ 	}
+	};
+
+	var req = https.request(options);
+
+	req.write(data);
+	req.end();
+
+	var responseData = '';
+	req.on('response', function(res){
+ 	res.on('data', function(chunk){
+   	responseData += chunk;
+ 	});
+
+ 	res.on('end', function(){
+   	console.log(JSON.parse(responseData));
+ 	});
+});
+}
+
+
 
