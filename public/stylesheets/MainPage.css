@@ -272,6 +272,42 @@ ul.topnav li.icon {display: none;}
     all:initial;
 }
 
+.adding {
+    color: #fff;
+    font-family: 'Aldrich';
+    margin-top: 30px;
+}.adding h3{
+    margin-top: 40px;
+    text-align: center;
+}.adding label{
+    padding: 5px;
+}
+
+.submitbox {
+    margin-top: 10px;
+    background-color: #89E4A3;
+    font-size: 22px;
+    border-radius: 5px;
+    font-family: 'Aldrich';
+    border: 0px;
+    color: #FFF;
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+}
+
+.gr{
+    border-color: #89E4A3;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    font-family: 'Aldrich';
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+
+
+}
+
 body {
     background-color: #4C7BD0; 
 }
