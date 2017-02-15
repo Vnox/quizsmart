@@ -63,9 +63,23 @@
 {{/if}}
 {{/each}}
 
-<div class="answerbutton toggle new" id="newbutton"> 
-  <a href={{addurl}} "><b> Add Question </b></a>
+
+<form role="form" method="get" action="{{addurl}}">
+<div class="adding">
+    <h3>Add a question</h3>
+      <div>
+        <label for="name">Question:</label>
+        <input type="text" class="form-control" id="new_ques" placeholder="Q" name="new_ques">
+      </div>
+      <div>
+        <label for="description">Answer:</label>
+        <input type="text" class="form-control" id="new_answer" placeholder="A" name="new_answer">
+      </div>
+      <input type="submit" id="submitBtn"  value="Add the question"></input>
 </div>
+</form>
+
+
 
 <script src="/javascripts/jquery.min.js"></script>
 <script src="/javascripts/MainPage.js"></script>

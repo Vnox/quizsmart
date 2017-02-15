@@ -28,18 +28,15 @@ exports.adding = function(set, req, res){
 	console.log("add called for " + set);
 	fs = require('fs');
 	var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
-
+	var new_ques = req.query.new_ques;
+	var new_answer = req.query.new_answer;
 	// manipulate json file
 	m.quizset[set - 1].questions.push(
-
-	
 		{
-          "qurl": 'ques/' + (m.quizset[set - 1].questions.length + 1) + '/' + set,
-          "q_text": "Added question",
-          "a_text": "Yahoo"
+          'qurl' : 'ques/' + (m.quizset[set - 1].questions.length + 1) + '/' + set,
+          "q_text" : new_ques,
+          "a_text" : new_answer
         }
-	
-
 		);
 	fs.writeFileSync('quiz_data.json', JSON.stringify(m));
 	console.log("JSON wrote back");
