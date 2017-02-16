@@ -101,6 +101,7 @@ app.get('/send5', function(req, res){
 });
 
 app.get('/record', record.view);
+app.get('/clear', record.clear);
 
 // Example route
 // app.get('/users', user.list);

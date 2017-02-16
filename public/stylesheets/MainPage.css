@@ -344,6 +344,11 @@ ul.topnav li.icon {display: none;}
 
 }
 
+.title{
+    font-size: 25px;
+    text-align: center;
+}
+
 .space{
     padding: 10px;
 }
