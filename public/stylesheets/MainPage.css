@@ -167,6 +167,7 @@ ul.topnav li.icon {display: none;}
     transition: border 0.3s;
     border-color: #C6DDFF;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+     -webkit-appearance: none;
 
 }
 
@@ -293,6 +294,7 @@ ul.topnav li.icon {display: none;}
     color: #FFF;
     padding-top: 20px;
     padding-bottom: 15px;
+     -webkit-appearance: none;
 
 }
 
