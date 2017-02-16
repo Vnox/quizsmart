@@ -119,7 +119,7 @@ exports.handleParams = function (params, res) {
     console.log('This is not a valid inbound SMS message!');
   } else {
     console.log('Success');
-    let incomingData = {
+    var incomingData = {
       messageId: params.messageId,
       from: params.msisdn,
       text: params.text,
