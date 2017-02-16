@@ -85,15 +85,13 @@ app.get('/send_msg', function(req, res){
 // Example route
 // app.get('/users', user.list);
 
-
-
 // Handle both GET and POST requests
 
-app.get('/inbound', (req, res) => {
+app.get('/inbound', function(req, res){
   managequestion.handleParams(req.query, res);
 });
 
-app.post('/inbound', (req, res) => {
+app.post('/inbound', function(req, res){
   managequestion.handleParams(req.body, res);
 });
 
