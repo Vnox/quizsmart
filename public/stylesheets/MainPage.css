@@ -352,6 +352,12 @@ ul.topnav li.icon {display: none;}
 .space{
     padding: 10px;
 }
+
+
+.exp{
+    font-size: 14px;
+    text-align: left;
+}
 body {
     background-color: #4C7BD0; 
 }
