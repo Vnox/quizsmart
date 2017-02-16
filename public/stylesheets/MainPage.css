@@ -371,7 +371,11 @@ ul.topnav li.icon {display: none;}
 }
 
 .long{
-    padding: 170px;
+    padding: 0px;
+}
+
+.big{
+    font-size: 40px;
 }
 
 
