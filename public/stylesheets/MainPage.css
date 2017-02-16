@@ -332,6 +332,21 @@ ul.topnav li.icon {display: none;}
     padding-right: 10px;
 }
 
+.record{
+
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px; /* 5px rounded corners */
+    background-color: #fff;
+    font-family: 'Aldrich';
+    margin-bottom: 15px;
+
+
+}
+
+.space{
+    padding: 10px;
+}
 body {
     background-color: #4C7BD0; 
 }

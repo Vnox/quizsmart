@@ -10,6 +10,7 @@ var settings = require('./routes/settings');
 var schedule = require('./routes/schedule');
 var actualshow = require('./routes/actualshow');
 var managequestion = require('./routes/managequestion');
+var record = require('./routes/record');
 // Example route
 // var user = require('./routes/user');
 
@@ -98,6 +99,8 @@ app.get('/send4', function(req, res){
 app.get('/send5', function(req, res){
     managequestion.sendmsg( 5, req, res );
 });
+
+app.get('/record', record.view);
 
 // Example route
 // app.get('/users', user.list);

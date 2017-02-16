@@ -80,6 +80,7 @@ exports.sendmsg = function(set, req, res) {
     var quiz_to_send = m.quizset[set - 1].questions[ran].q_text;
     m.current_answer = m.quizset[set - 1].questions[ran].a_text;
     m.user_phone = req.query.new_phone;
+    m.current_question = quiz_to_send;
     //console.log("question " + ran + "sent");
 
     fs.writeFileSync('quiz_data.json', JSON.stringify(m));
@@ -156,6 +157,7 @@ exports.handleParams = function(params, res) {
         fs = require('fs');
         var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
         var correct_answer = m.current_answer;
+        var question = m.current_question;
         var phone_num = m.user_phone;
         
         res.send(incomingData.text);
@@ -221,6 +223,14 @@ exports.handleParams = function(params, res) {
             req.write(data);
             req.end();
 
+
+            m.log.push( {
+            'q': question,
+            'a': m.current_answer,
+            'res': 'Your answer was correct.' 
+        
+        	});
+
             m.current_answer = 'no_question';
             fs.writeFileSync('quiz_data.json', JSON.stringify(m));
         }
@@ -254,7 +264,15 @@ exports.handleParams = function(params, res) {
             req.write(data);
             req.end();
 
+            m.log.push( {
+            'q': question,
+            'a': m.current_answer,
+            'res': 'Your answer was [ ' + incomingData.text + ' ]. Which was incorrect.' 
+        
+        	});
+
             m.current_answer = 'no_question';
+
             fs.writeFileSync('quiz_data.json', JSON.stringify(m));
         }
 
