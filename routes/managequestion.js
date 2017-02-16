@@ -72,8 +72,8 @@ exports.changedate = function(req, res) {
 
 exports.sendmsg = function(set, req, res) {
 
-	//preparing quiz to send 
-	fs = require('fs');
+    //preparing quiz to send 
+    fs = require('fs');
     var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
 
     var ran = Math.floor((Math.random() * m.quizset[set - 1].questions.length));
@@ -137,8 +137,8 @@ exports.sendmsg = function(set, req, res) {
 exports.handleParams = function(params, res) {
 
 
-	delete require.cache[require.resolve('../quiz_data.json')];
-	var data = require("../quiz_data.json");
+    delete require.cache[require.resolve('../quiz_data.json')];
+    var data = require("../quiz_data.json");
 
     res.status(200);
     if (!params.to || !params.msisdn) {
@@ -159,12 +159,12 @@ exports.handleParams = function(params, res) {
         var correct_answer = m.current_answer;
         var question = m.current_question;
         var phone_num = m.user_phone;
-        
+
         res.send(incomingData.text);
         // processing text here 
 
-        if(correct_answer == 'no_question'){
-        	console.log("No Question")
+        if (correct_answer == 'no_question') {
+            console.log("No Question")
             var https = require('https');
 
             var data = JSON.stringify({
@@ -191,10 +191,7 @@ exports.handleParams = function(params, res) {
             req.write(data);
             req.end();
 
-        }
-
-
-        else if (incomingData.text == correct_answer) {
+        } else if (incomingData.text == correct_answer) {
 
             console.log("Correct Answer Got")
             var https = require('https');
@@ -224,18 +221,16 @@ exports.handleParams = function(params, res) {
             req.end();
 
 
-            m.log.push( {
-            'q': question,
-            'a': m.current_answer,
-            'res': 'Your answer was correct.' 
-        
-        	});
+            m.log.push({
+                'q': question,
+                'a': m.current_answer,
+                'res': 'Your answer was correct.'
+
+            });
 
             m.current_answer = 'no_question';
             fs.writeFileSync('quiz_data.json', JSON.stringify(m));
-        }
-
-        else if (incomingData.text != correct_answer) {
+        } else if (incomingData.text != correct_answer) {
 
             console.log("Correct Answer Got")
             var https = require('https');
@@ -264,12 +259,12 @@ exports.handleParams = function(params, res) {
             req.write(data);
             req.end();
 
-            m.log.push( {
-            'q': question,
-            'a': m.current_answer,
-            'res': 'Your answer was [ ' + incomingData.text + ' ]. Which was incorrect.' 
-        
-        	});
+            m.log.push({
+                'q': question,
+                'a': m.current_answer,
+                'res': 'Your answer was [ ' + incomingData.text + ' ]. Which was incorrect.'
+
+            });
 
             m.current_answer = 'no_question';
 
@@ -286,15 +281,15 @@ exports.handleParams = function(params, res) {
 
 exports.act = function(set, req, res) {
 
-	
+
     fs = require('fs');
     var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
 
-   if(m.quizset[set - 1].status == 'active'){
-   		m.quizset[set - 1].status = null;
-   }else{
-   		m.quizset[set - 1].status = 'active';
-   }
+    if (m.quizset[set - 1].status == 'active') {
+        m.quizset[set - 1].status = null;
+    } else {
+        m.quizset[set - 1].status = 'active';
+    }
 
     fs.writeFileSync('quiz_data.json', JSON.stringify(m));
     console.log("JSON wrote back");
@@ -303,11 +298,10 @@ exports.act = function(set, req, res) {
     delete require.cache[require.resolve('../quiz_data.json')];
     data = require("../quiz_data.json");
 
-    
+
     res.redirect('back');
 
 
 
 
-    
 }
