@@ -44,8 +44,9 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
+
 app.get('/index', index.view);
-app.get('/', index.view);
+app.get('/', index.login);
 app.get('/addnewquiz', addnewquiz.showQuizSet);
 app.get('/settings', settings.view);
 app.get('/schedule1', schedule.view1);
@@ -59,6 +60,7 @@ app.get('/actualshow2', actualshow.show2);
 app.get('/actualshow3', actualshow.show3);
 app.get('/actualshow4', actualshow.show4);
 app.get('/actualshow5', actualshow.show5);
+
 
 app.get('/ques/:id/:set', function(req, res){
     console.log( "question is " + req.params.id );

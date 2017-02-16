@@ -370,6 +370,10 @@ ul.topnav li.icon {display: none;}
 
 }
 
+.long{
+    padding: 170px;
+}
+
 
 body {
     background-color: #4C7BD0; 
