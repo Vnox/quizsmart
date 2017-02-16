@@ -110,10 +110,15 @@ exports.sendmsg = function(req, res){
    	console.log(JSON.parse(responseData));
  	});
 });
+
+	res.redirect('back');
+
+
 }
 
 
 exports.handleParams = function (params, res) {
+
   res.status(200);
   if (!params.to || !params.msisdn) {
     console.log('This is not a valid inbound SMS message!');
