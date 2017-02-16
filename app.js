@@ -47,12 +47,18 @@ app.get('/index', index.view);
 app.get('/', index.view);
 app.get('/addnewquiz', addnewquiz.showQuizSet);
 app.get('/settings', settings.view);
-app.get('/schedule', schedule.view);
+app.get('/schedule1', schedule.view1);
+app.get('/schedule2', schedule.view2);
+app.get('/schedule3', schedule.view3);
+app.get('/schedule4', schedule.view4);
+app.get('/schedule5', schedule.view5);
+
 app.get('/actualshow1', actualshow.show1);
 app.get('/actualshow2', actualshow.show2);
 app.get('/actualshow3', actualshow.show3);
 app.get('/actualshow4', actualshow.show4);
 app.get('/actualshow5', actualshow.show5);
+
 app.get('/ques/:id/:set', function(req, res){
     console.log( "question is " + req.params.id );
     console.log( "set is " + req.params.set );
@@ -74,12 +80,23 @@ app.get('/adding4', function(req, res){
 app.get('/adding5', function(req, res){
     managequestion.adding( 5, req, res );
 });
-app.get('/adding5', function(req, res){
-    managequestion.adding( 5, req, res );
-});
 
-app.get('/send_msg', function(req, res){
-    managequestion.sendmsg( req, res );
+
+
+app.get('/send1', function(req, res){
+    managequestion.sendmsg( 1, req, res );
+});
+app.get('/send2', function(req, res){
+    managequestion.sendmsg( 2, req, res );
+});
+app.get('/send3', function(req, res){
+    managequestion.sendmsg( 3, req, res );
+});
+app.get('/send4', function(req, res){
+    managequestion.sendmsg( 4, req, res );
+});
+app.get('/send5', function(req, res){
+    managequestion.sendmsg( 5, req, res );
 });
 
 // Example route
