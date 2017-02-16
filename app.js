@@ -100,6 +100,23 @@ app.get('/send5', function(req, res){
     managequestion.sendmsg( 5, req, res );
 });
 
+app.get('/act1', function(req, res){
+    managequestion.act( 1, req, res );
+});
+app.get('/act2', function(req, res){
+    managequestion.act( 2, req, res );
+});
+app.get('/act3', function(req, res){
+    managequestion.act( 3, req, res );
+});
+app.get('/act4', function(req, res){
+    managequestion.act( 4, req, res );
+});
+app.get('/act5', function(req, res){
+    managequestion.act( 5, req, res );
+});
+
+
 app.get('/record', record.view);
 app.get('/clear', record.clear);
 

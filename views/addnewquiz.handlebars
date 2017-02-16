@@ -36,6 +36,19 @@
 </div>
 
 
+{{#if status}}
+
+<div class="answerbutton toggle green" id="sabutton"> 
+  <a href={{activate}} ><b> Activated </b></a>
+</div>
+
+{{else}}
+
+<div class="answerbutton toggle red" id="sabutton"> 
+  <a href={{activate}} ><b>  Disabled </b></a>
+</div>
+
+{{/if}}
 
 <div class="answerbutton toggle" id="sabutton"> 
   <a href="#answershowed" onclick="dummyAnswer()"><b> Toggle Answer </b></a>

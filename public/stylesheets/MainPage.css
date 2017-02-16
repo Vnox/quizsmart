@@ -358,6 +358,19 @@ ul.topnav li.icon {display: none;}
     font-size: 14px;
     text-align: left;
 }
+
+
+.green{
+    background-color: #89E4A3;
+
+    }.red {
+
+    background-color: #AAA;
+
+
+}
+
+
 body {
     background-color: #4C7BD0; 
 }

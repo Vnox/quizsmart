@@ -282,3 +282,32 @@ exports.handleParams = function(params, res) {
     }
     res.status(200).end();
 }
+
+
+exports.act = function(set, req, res) {
+
+	
+    fs = require('fs');
+    var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
+
+   if(m.quizset[set - 1].status == 'active'){
+   		m.quizset[set - 1].status = null;
+   }else{
+   		m.quizset[set - 1].status = 'active';
+   }
+
+    fs.writeFileSync('quiz_data.json', JSON.stringify(m));
+    console.log("JSON wrote back");
+
+    //delete the fucking cached file
+    delete require.cache[require.resolve('../quiz_data.json')];
+    data = require("../quiz_data.json");
+
+    
+    res.redirect('back');
+
+
+
+
+    
+}
