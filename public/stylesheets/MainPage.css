@@ -308,6 +308,28 @@ ul.topnav li.icon {display: none;}
 
 }
 
+.sr{
+    margin-bottom: 8px;
+    margin-top: 5px;
+    font-family: 'Aldrich';
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+
+}
+
+
+.grr{
+    margin-top: 40px;
+}
+
+
+.testbox {
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 body {
     background-color: #4C7BD0; 
 }

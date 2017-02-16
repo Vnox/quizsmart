@@ -35,16 +35,26 @@
 <div id='add_fri' class="answerbutton"> 
   <a href='' onclick=""><b> Friday </b></a>
 </div>
-<div id='add_sat'class="answerbutton"> 
+<div id='add_sat' class="answerbutton"> 
   <a href='' onclick=""><b> Saturday </b></a>
 </div>
-<div id='add_sun'class="answerbutton"> 
+<div id='add_sun' class="answerbutton"> 
   <a href='' onclick=""><b> Sunday </b></a>
 </div>
 
-<div id='test_question' class="answerbutton"> 
-  <a href='send_msg' onclick=""><b> Send Me Random Question Right Now </b></a>
+
+<form role="form" method="get" action='send_msg'>
+
+<div class='testbox'>
+        <input type="text" class="inputbox sr grr" id="new_phone" placeholder="Phone Number Here" name="new_phone">
 </div>
+
+<div id='test_question' class="testbox"> 
+ 		<input type="submit" class="inputbox submitbox"  value="Send Me Random Question Right Now"></input>
+</div>
+
+</form>
+
 
 <p class="dummytext"> Tap on days to activate them. <br>Quiz time is 9am - 7pm everyday </p>
 

@@ -73,10 +73,13 @@ exports.sendmsg = function(req, res){
 	console.log('Sending Msg');
 	var https = require('https');
 
+	console.log(req.query.new_phone)
+	var phone_number = req.query.new_phone;
+
 	var data = JSON.stringify({
  		api_key: '8f91433f',
  		api_secret: 'a448a3c3e2c5ea0b',
- 		to: '18587661874',
+ 		to: req.query.new_phone ,
  		from: '12034089845',
  		text: 'Hello from quizsmart, It\'s time to take your quiz now : )'
 	});
@@ -108,6 +111,67 @@ exports.sendmsg = function(req, res){
  	});
 });
 }
+
+
+exports.handleParams = function (params, res) {
+  res.status(200);
+  if (!params.to || !params.msisdn) {
+    console.log('This is not a valid inbound SMS message!');
+  } else {
+    console.log('Success');
+    let incomingData = {
+      messageId: params.messageId,
+      from: params.msisdn,
+      text: params.text,
+      type: params.type,
+      timestamp: params['message-timestamp']
+    };
+    console.log("Just received new message saying : " + incomingData.text);
+    //fs = require('fs');
+  	// var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
+  	// m.quizset.push({"log" : "new-msg received"});
+  	// fs.writeFileSync('quiz_data.json', JSON.stringify(m));
+    res.send(incomingData.text);
+    // processing text here 
+    if(incomingData.text == "Shuo"){
+    	console.log("Shuo just send me text")
+    	var https = require('https');
+
+	var data = JSON.stringify({
+ 		api_key: '8f91433f',
+ 		api_secret: 'a448a3c3e2c5ea0b',
+ 		to: '18586991088',
+ 		from: '12034089845',
+ 		text: 'Hello Shuo, This is a greeting from QuizSmart. I know you, you are Leon\'s friend.'
+	});
+
+	var options = {
+ 	host: 'rest.nexmo.com',
+ 	path: '/sms/json',
+ 	port: 443,
+ 	method: 'POST',
+ 	headers: {
+   'Content-Type': 'application/json',
+   'Content-Length': Buffer.byteLength(data)
+ 	}
+	};
+
+	var req = https.request(options);
+
+	req.write(data);
+	req.end();
+    }
+
+
+
+
+
+
+  }
+  res.status(200).end();
+}
+
+
 
 
 
