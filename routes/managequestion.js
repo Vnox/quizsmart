@@ -78,7 +78,8 @@ exports.sendmsg = function(set, req, res) {
 
     var ran = Math.floor((Math.random() * m.quizset[set - 1].questions.length));
     var quiz_to_send = m.quizset[set - 1].questions[ran].q_text;
-
+    m.current_answer = m.quizset[set - 1].questions[ran].a_text;
+    m.user_phone = req.query.new_phone;
     //console.log("question " + ran + "sent");
 
     fs.writeFileSync('quiz_data.json', JSON.stringify(m));
@@ -88,6 +89,8 @@ exports.sendmsg = function(set, req, res) {
 
     console.log(req.query.new_phone)
     var phone_number = req.query.new_phone;
+
+    quiz_to_send = "[ QuizSmart ] Ding Ding Ding Ding Ding, It\'s quiz time ! Here is a question for you : " + quiz_to_send;
 
     var data = JSON.stringify({
         api_key: '8f91433f',
@@ -132,6 +135,10 @@ exports.sendmsg = function(set, req, res) {
 
 exports.handleParams = function(params, res) {
 
+
+	delete require.cache[require.resolve('../quiz_data.json')];
+	var data = require("../quiz_data.json");
+
     res.status(200);
     if (!params.to || !params.msisdn) {
         console.log('This is not a valid inbound SMS message!');
@@ -144,23 +151,26 @@ exports.handleParams = function(params, res) {
             type: params.type,
             timestamp: params['message-timestamp']
         };
+
         console.log("Just received new message saying : " + incomingData.text);
-        //fs = require('fs');
-        // var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
-        // m.quizset.push({"log" : "new-msg received"});
-        // fs.writeFileSync('quiz_data.json', JSON.stringify(m));
+        fs = require('fs');
+        var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
+        var correct_answer = m.current_answer;
+        var phone_num = m.user_phone;
+        
         res.send(incomingData.text);
         // processing text here 
-        if (incomingData.text == "Shuo") {
-            console.log("Shuo just send me text")
+
+        if(correct_answer == 'no_question'){
+        	console.log("No Question")
             var https = require('https');
 
             var data = JSON.stringify({
                 api_key: '8f91433f',
                 api_secret: 'a448a3c3e2c5ea0b',
-                to: '18586991088',
+                to: phone_num,
                 from: '12034089845',
-                text: 'Hello Shuo, This is a greeting from QuizSmart. I know you, you are Leon\'s friend.'
+                text: ' [ QuizSmart ] There is no question to be responded :( '
             });
 
             var options = {
@@ -178,6 +188,74 @@ exports.handleParams = function(params, res) {
 
             req.write(data);
             req.end();
+
+        }
+
+
+        else if (incomingData.text == correct_answer) {
+
+            console.log("Correct Answer Got")
+            var https = require('https');
+
+            var data = JSON.stringify({
+                api_key: '8f91433f',
+                api_secret: 'a448a3c3e2c5ea0b',
+                to: phone_num,
+                from: '12034089845',
+                text: ' [ QuizSmart ] Great Job. Your answer is correct. I\'ve logged that : )'
+            });
+
+            var options = {
+                host: 'rest.nexmo.com',
+                path: '/sms/json',
+                port: 443,
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Content-Length': Buffer.byteLength(data)
+                }
+            };
+
+            var req = https.request(options);
+
+            req.write(data);
+            req.end();
+
+            m.current_answer = 'no_question';
+            fs.writeFileSync('quiz_data.json', JSON.stringify(m));
+        }
+
+        else if (incomingData.text != correct_answer) {
+
+            console.log("Correct Answer Got")
+            var https = require('https');
+
+            var data = JSON.stringify({
+                api_key: '8f91433f',
+                api_secret: 'a448a3c3e2c5ea0b',
+                to: phone_num,
+                from: '12034089845',
+                text: ' [ QuizSmart ] Dude, your answer is wrong. The correct answer is [ ' + correct_answer + ' ]. I\'ve logged that. Please study harder !'
+            });
+
+            var options = {
+                host: 'rest.nexmo.com',
+                path: '/sms/json',
+                port: 443,
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Content-Length': Buffer.byteLength(data)
+                }
+            };
+
+            var req = https.request(options);
+
+            req.write(data);
+            req.end();
+
+            m.current_answer = 'no_question';
+            fs.writeFileSync('quiz_data.json', JSON.stringify(m));
         }
 
 
