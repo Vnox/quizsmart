@@ -47,6 +47,7 @@ if ('development' == app.get('env')) {
 
 app.get('/index', index.view);
 app.get('/', index.login);
+app.get('/faq', index.faq);
 app.get('/addnewquiz', addnewquiz.showQuizSet);
 app.get('/settings', settings.view);
 app.get('/schedule1', schedule.view1);

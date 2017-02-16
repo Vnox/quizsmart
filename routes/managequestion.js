@@ -75,12 +75,17 @@ exports.sendmsg = function(set, req, res) {
     //preparing quiz to send 
     fs = require('fs');
     var m = JSON.parse(fs.readFileSync('quiz_data.json').toString());
-
-    var ran = Math.floor((Math.random() * m.quizset[set - 1].questions.length));
-    var quiz_to_send = m.quizset[set - 1].questions[ran].q_text;
-    m.current_answer = m.quizset[set - 1].questions[ran].a_text;
-    m.user_phone = req.query.new_phone;
-    m.current_question = quiz_to_send;
+    var quiz_to_send = ''
+    if(m.quizset[set - 1].questions.length === 0){
+    	quiz_to_send = ' There\'s no question in this set dude. Switch to another one. Reply whatever to continue : ( '
+    }else if(m.quizset[set - 1].questions.length !== 0){
+    	var ran = Math.floor((Math.random() * m.quizset[set - 1].questions.length));
+    	var quiz_to_send = m.quizset[set - 1].questions[ran].q_text;
+    	m.current_answer = m.quizset[set - 1].questions[ran].a_text;
+    	m.user_phone = req.query.new_phone;
+    	m.current_question = quiz_to_send;
+    }
+    
     //console.log("question " + ran + "sent");
 
     fs.writeFileSync('quiz_data.json', JSON.stringify(m));
