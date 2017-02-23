@@ -52,11 +52,17 @@ exports.adding = function(set, req, res) {
     m.quizset[set - 1].questions.unshift(
 
         {
-            'qurl': 'ques/' + (m.quizset[set - 1].questions.length + 1) + '/' + set,
+            'qurl': 'ques/' + 1 + '/' + set,
             "q_text": new_ques,
             "a_text": new_answer
         }
     );
+
+    for (var i = 1; i < m.quizset[set - 1].questions.length; i++) {
+        // alter url property
+        m.quizset[set - 1].questions[i].qurl = 'ques/' + (i + 1) + '/' + set;
+    }
+
 
     //m.quizset[set - 1].questions.push(temp);
 
