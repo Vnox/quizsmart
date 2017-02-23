@@ -15,9 +15,9 @@
 
 <ul class="topnav" id="myTopnav">
   <li><img src="https://s3.amazonaws.com/quizsmart/QuizSmartIcon.png" alt="Logo" style="width:100px;height:17px;"></li>
-  <li><a href="index">My Quizzes</a></li>
+  <li><a href="index" class="highlight">Back to Home</a></li>
   <li><a href="record">Record</a></li>
-    <li><a href="faq">FAQ</a></li>
+  <li><a href="faq">FAQ</a></li>
   <li class="icon">
     <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
   </li>
@@ -29,7 +29,12 @@
 </ul>
 
 <div class="nameinput title">
-  <p> Question Set {{index}} </p> 
+
+
+<p> Set {{index}} </p> 
+
+
+  
 </div>
 
 <div class="schedulebutton">
@@ -40,21 +45,42 @@
 {{#if status}}
 
 <div class="answerbutton toggle green" id="sabutton"> 
-  <a href={{activate}} ><b> Activated </b></a>
+  <a href={{activate}} ><b> Active Now, Tap to Disable </b></a>
 </div>
 
 {{else}}
 
 <div class="answerbutton toggle red" id="sabutton"> 
-  <a href={{activate}} ><b>  Disabled </b></a>
+  <a href={{activate}} ><b>  Disabled Now, Tap to Activate </b></a>
 </div>
 
 {{/if}}
 
-<div class="answerbutton toggle" id="sabutton"> 
-  <a href="#answershowed" onclick="dummyAnswer()"><b> Toggle Answer </b></a>
+<div class="answerbutton toggle" id="sabuttont"> 
+  <a href="#answershowed" onclick="dummyAnswer()"><b> Show Answer </b></a>
 </div>
 
+<div class="answerbutton toggle" id="sabuttonrev"> 
+  <a href="#answershowed" onclick="add('{{addurl}}')" id="revbutton"><b> Add New Question </b></a>
+</div>
+
+
+
+<!-- <form role="form" method="get" action="{{addurl}}">
+<div class="adding">
+   
+      <div>
+        <label for="name">Question:</label>
+        <input type="text" class="inputbox gr" id="new_ques" placeholder="Enter quiz question here" name="new_ques">
+      </div>
+      <div>
+        <label for="description">Answer:</label>
+        <input type="text" class="inputbox gr" id="new_answer" placeholder="Enter answer here" name="new_answer">
+      </div>
+      <input type="submit" class="inputbox submitbox"  value="Add New Question : )"></input>
+</div>
+
+</form> -->
 
 {{#each questions}}
 
@@ -68,7 +94,7 @@
 </div>
 <div id="quizquestion" class="quizquestion">
   <p>{{this.q_text}}</p>
-  <p name="answer" class="answer">{{this.a_text}}</p>
+  <p name="answer" class="answer" id="answer">{{this.a_text}}</p>
 </div>
 <div class="answerbutton"> 
   <a href={{qurl}} onclick=""><b> Delete </b></a>
@@ -79,20 +105,7 @@
 {{/each}}
 
 
-<form role="form" method="get" action="{{addurl}}">
-<div class="adding">
-   
-      <div>
-        <label for="name">Question:</label>
-        <input type="text" class="inputbox gr" id="new_ques" placeholder="Enter quiz question here" name="new_ques">
-      </div>
-      <div>
-        <label for="description">Answer:</label>
-        <input type="text" class="inputbox gr" id="new_answer" placeholder="Enter answer here" name="new_answer">
-      </div>
-      <input type="submit" class="inputbox submitbox"  value="Add New Question : )"></input>
-</div>
-</form>
+
 
 
 

@@ -276,7 +276,7 @@ ul.topnav li.icon {display: none;}
 .adding {
     color: #fff;
     font-family: 'Aldrich';
-    margin-top: 30px;
+    margin-top: 0px;
 }.adding h3{
     margin-top: 40px;
     text-align: center;
@@ -376,6 +376,10 @@ ul.topnav li.icon {display: none;}
 
 .big{
     font-size: 40px;
+}
+
+.highlight{
+    background-color:  #89E4A3;
 }
 
 
