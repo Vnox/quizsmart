@@ -384,11 +384,12 @@ ul.topnav li.icon {display: none;}
 
 .delete {
     all: unset;
-    padding-left: 74%;
+    padding-left: 70%;
 }
 
 .deletea {
     all: unset;
+    -webkit-appearance: none;
     color: #C66;
 }
 
