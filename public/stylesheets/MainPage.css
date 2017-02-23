@@ -382,6 +382,15 @@ ul.topnav li.icon {display: none;}
     background-color:  #89E4A3;
 }
 
+.delete {
+    all: unset;
+    padding-left: 80%;
+}
+
+.deletea {
+    all: unset;
+    color: #C66;
+}
 
 body {
     background-color: #4C7BD0; 
