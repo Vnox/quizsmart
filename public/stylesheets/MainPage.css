@@ -393,6 +393,10 @@ ul.topnav li.icon {display: none;}
     color: #C66;
 }
 
+.icon {
+    padding: 0px;
+    
+}
 body {
     background-color: #4C7BD0; 
 }
