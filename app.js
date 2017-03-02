@@ -46,6 +46,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 
 app.get('/index', index.view);
+app.get('/index_b', index.view_b);
 app.get('/', index.login);
 app.get('/faq', index.faq);
 app.get('/addnewquiz', addnewquiz.showQuizSet);

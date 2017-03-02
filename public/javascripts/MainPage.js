@@ -74,3 +74,13 @@ function hideAnswers(){
   $("#answer").removeClass()
 
 }
+
+function versionbpreview(){
+
+  
+}
+
+
+
+
+

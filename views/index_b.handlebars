@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz Smart</title>
+</head>
+
+<meta name="viewport" content="width=device-width">
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<link href="/stylesheets/MainPage.css" rel="stylesheet">
+
+
+<body>
+
+<ul class="topnav" id="myTopnav">
+  <li><a href="index" class="icon"><img src="https://s3.amazonaws.com/quizsmart/QuizSmartIcon.png" alt="Logo" style="width:100px;height:17px; padding:0px;"></a></li>
+  <li><a href="index" class="highlight">Home</a></li>
+  <li><a href="record">Record</a></li>
+  <li><a href="faq">FAQ</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+
+<ul class="quizlist" id="myQuiz" style="list-style-type:none">
+
+
+  <li></li>
+
+
+</ul>
+
+<!-- <div class="card">
+
+	<div class="cardheader">
+	<p><b>COGS101A</b></p>
+	</div>
+
+  <div class="container"> 
+    <p> <b>10</b> Questions in set. <br> <b>Preview</b>: What are the factors that can affect human perceiption of light ? <br> Why human cannot fly ? <br> Why is this assignment so long ?</p> 
+
+  </div>
+  <img class= "activeIcon" src="https://s3.amazonaws.com/quizsmart/ActiveIcon.png" alt="Avatar" style="width:80px; height:20px">
+  
+</div>
+
+<div class="card">
+
+	<div class="cardheader">
+	<p><b>CSE 170</b></p>
+	</div>
+  <div class="container"> 
+    <p> <b>5</b> Questions in set. <br> <b>Preview</b>: What are the factors that can affect human perceiption of light ? <br> Why human cannot fly ? <br> Why is this assignment so long ?</p> 
+  </div>
+  <img class= "activeIcon" src="https://s3.amazonaws.com/quizsmart/InactiveIcon.png" alt="Avatar" style="width:90px; height:20px">
+  
+</div> -->
+
+{{#each quizset}}
+
+  <div class="card">
+  <div class="cardheader">
+  <p><b> {{name}} </b></p>
+  </div>
+  <div class="container"> 
+    <p class="versionb"> 
+  <!--   <b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:</b> 
+    {{#if this.questions.[0]}} <br> {{this.questions.[0].q_text}} {{else}} No questions in set, <br> please click to add : ) {{/if}} 
+    {{#if this.questions.[1]}} <br> {{this.questions.[1].q_text}} {{/if}}  
+    {{#if this.questions.[2]}} <br> {{this.questions.[2].q_text}} {{/if}} 
+    {{#if this.questions.[3]}} <br>  
+     <div class="schedulebutton previewbtn">
+      <p><a href="/preview"><b> View More </b></a></p>
+    </div>  
+    {{/if}} -->
+    <b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:</b> 
+    {{#each this.questions}}  {{q_text}} <br> {{/each}}
+
+
+    {{#if this.questions.[3]}} <br>  
+     <div class="schedulebutton previewbtn">
+      <p><a href="/preview"><b> View More </b></a></p>
+    </div>  
+    {{/if}}
+    </p> 
+
+
+
+<div class="schedulebutton previewbtn">
+  <p><a href="{{url}}"><b> Enter Set </b></a></p>
+</div>
+
+  </div>
+  {{#if this.status}}
+  <img class= "activeIcon" src="https://s3.amazonaws.com/quizsmart/ActiveIcon.png" alt="Avatar" style="width:80px; height:20px">
+  {{else}}
+  <img class= "activeIcon" src="https://s3.amazonaws.com/quizsmart/InactiveIcon.png" alt="Avatar" style="width:95px; height:20px;">
+  {{/if}}
+  </div>
+
+{{/each}}
+
+<div class="schedulebutton">
+  <p><a href="/record"><b> VIEW RECORD </b></a></p>
+</div>
+
+
+
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/MainPage.js"></script>
+
+
+</body>
+</html>

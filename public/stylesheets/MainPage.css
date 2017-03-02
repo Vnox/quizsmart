@@ -76,8 +76,7 @@ ul.topnav li.icon {display: none;}
     background-color: #fff;
     font-family: 'Aldrich';
     margin-bottom: 15px;
-
-}
+} 
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -87,6 +86,7 @@ ul.topnav li.icon {display: none;}
 /* Add some padding inside the card container */
 .container {
     padding: 2px 12px;
+    font-family: 'Aldrich';
 }
 
 .activeIcon {
@@ -396,6 +396,23 @@ ul.topnav li.icon {display: none;}
 .icon {
     padding: 0px;
     
+}
+
+.versionb{
+    font-family: 'Aldrich';
+}
+
+.previewbtn{
+   
+    text-decoration: none;
+    align-self: center;
+    background-color: #72A4FF;
+    color: #FFF;
+    padding: 12px;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
 }
 body {
     background-color: #4C7BD0; 

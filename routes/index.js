@@ -12,6 +12,13 @@ exports.view = function(req, res){
   res.render('index', data);
 };
 
+exports.view_b = function(req, res){
+  console.log(data);
+  delete require.cache[require.resolve('../quiz_data.json')];
+  data = require("../quiz_data.json");
+  res.render('index_b', data);
+};
+
 
 exports.login = function(req, res){
   console.log(data);
