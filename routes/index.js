@@ -34,3 +34,5 @@ exports.faq = function(req, res){
   data = require("../quiz_data.json");
   res.render('faq', data);
 };
+
+

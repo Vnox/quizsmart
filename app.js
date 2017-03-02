@@ -139,6 +139,15 @@ app.post('/inbound', function(req, res){
 
 
 
+app.get('/getdata',function(req, res){
+  delete require.cache[require.resolve('./quiz_data.json')];
+  var data = require("./quiz_data.json");
+  res.writeHead(200, {'Content-Type': 'application/javascript'});
+  res.end(JSON.stringify(data));  
+});
+
+
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

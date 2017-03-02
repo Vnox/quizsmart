@@ -75,9 +75,157 @@ function hideAnswers(){
 
 }
 
-function versionbpreview(){
+var clicked1 = false;
+var clicked2 = false;
+var clicked3 = false;
+var clicked4 = false;
+var clicked5 = false;
 
-  
+function preview1(){
+
+  console.log("prev 1 called")
+  if(clicked1 == false){
+    clicked1 = true;
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+    var newHTML =  '<b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:<br></b> {{#each this.questions}}  {{q_text}} <br> {{/each}}{{#if this.questions.[3]}} <br>   {{/if}}'
+    var template = Handlebars.compile(newHTML);
+   $('#pre1').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> Collapse </b></a>')
+   $(".versionb1").html(template(data.quizset[0]));
+
+});
+  }else{
+    clicked1 = false;
+    console.log('falsed')
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+   var newHTML =    ' <b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:</b> {{#if this.questions.[0]}} <br> {{this.questions.[0].q_text}} {{else}} No questions in set, <br> please click to add : ) {{/if}} {{#if this.questions.[1]}} <br> {{this.questions.[1].q_text}} {{/if}}  {{#if this.questions.[2]}} <br> {{this.questions.[2].q_text}} {{/if}}  {{#if this.questions.[3]}} <br>      {{/if}}'
+   var template = Handlebars.compile(newHTML);
+   $('#pre1').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> View More </b></a>')
+   $(".versionb1").html(template(data.quizset[0]));
+
+});
+
+  }
+
+}
+
+function preview2(){
+
+  console.log("prev 2 called")
+  if(clicked2 == false){
+    clicked2 = true;
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+    var newHTML =  '<b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:<br></b> {{#each this.questions}}  {{q_text}} <br> {{/each}}{{#if this.questions.[3]}} <br>   {{/if}}'
+    var template = Handlebars.compile(newHTML);
+   $('#pre2').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> Collapse </b></a>')
+   $(".versionb2").html(template(data.quizset[1]));
+
+});
+  }else{
+    clicked2 = false;
+    console.log('falsed')
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+   var newHTML =    ' <b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:</b> {{#if this.questions.[0]}} <br> {{this.questions.[0].q_text}} {{else}} No questions in set, <br> please click to add : ) {{/if}} {{#if this.questions.[1]}} <br> {{this.questions.[1].q_text}} {{/if}}  {{#if this.questions.[2]}} <br> {{this.questions.[2].q_text}} {{/if}}  {{#if this.questions.[3]}} <br>      {{/if}}'
+   var template = Handlebars.compile(newHTML);
+   $('#pre2').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> View More </b></a>')
+   $(".versionb2").html(template(data.quizset[1]));
+
+});
+
+  }
+
+}
+
+
+
+function preview3(){
+
+  console.log("prev 3 called")
+  if(clicked3 == false){
+    clicked3 = true;
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+    var newHTML =  '<b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:<br></b> {{#each this.questions}}  {{q_text}} <br> {{/each}}{{#if this.questions.[3]}} <br>   {{/if}}'
+    var template = Handlebars.compile(newHTML);
+   $('#pre3').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> Collapse </b></a>')
+   $(".versionb3").html(template(data.quizset[2]));
+
+});
+  }else{
+    clicked3 = false;
+    console.log('falsed')
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+   var newHTML =    ' <b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:</b> {{#if this.questions.[0]}} <br> {{this.questions.[0].q_text}} {{else}} No questions in set, <br> please click to add : ) {{/if}} {{#if this.questions.[1]}} <br> {{this.questions.[1].q_text}} {{/if}}  {{#if this.questions.[2]}} <br> {{this.questions.[2].q_text}} {{/if}}  {{#if this.questions.[3]}} <br>      {{/if}}'
+   var template = Handlebars.compile(newHTML);
+   $('#pre3').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> View More </b></a>')
+   $(".versionb3").html(template(data.quizset[2]));
+
+});
+
+  }
+
+}
+
+function preview4(){
+
+  console.log("prev 4 called")
+  if(clicked4 == false){
+    clicked4 = true;
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+    var newHTML =  '<b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:<br></b> {{#each this.questions}}  {{q_text}} <br> {{/each}}{{#if this.questions.[3]}} <br>   {{/if}}'
+    var template = Handlebars.compile(newHTML);
+   $('#pre4').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> Collapse </b></a>')
+   $(".versionb4").html(template(data.quizset[3]));
+
+});
+  }else{
+    clicked4 = false;
+    console.log('falsed')
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+   var newHTML =    ' <b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:</b> {{#if this.questions.[0]}} <br> {{this.questions.[0].q_text}} {{else}} No questions in set, <br> please click to add : ) {{/if}} {{#if this.questions.[1]}} <br> {{this.questions.[1].q_text}} {{/if}}  {{#if this.questions.[2]}} <br> {{this.questions.[2].q_text}} {{/if}}  {{#if this.questions.[3]}} <br>      {{/if}}'
+   var template = Handlebars.compile(newHTML);
+   $('#pre4').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> View More </b></a>')
+   $(".versionb4").html(template(data.quizset[3]));
+
+});
+
+  }
+
+}
+
+function preview5(){
+
+  console.log("prev 5 called")
+  if(clicked5 == false){
+    clicked5 = true;
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+    var newHTML =  '<b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:<br></b> {{#each this.questions}}  {{q_text}} <br> {{/each}}{{#if this.questions.[3]}} <br>   {{/if}}'
+    var template = Handlebars.compile(newHTML);
+   $('#pre5').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> Collapse </b></a>')
+   $(".versionb5").html(template(data.quizset[4]));
+
+});
+  }else{
+    clicked5 = false;
+    console.log('falsed')
+     $.getJSON( "/getdata", function( data ) {
+    //console.log(data);
+   var newHTML =    ' <b>{{num_question}}</b> Questions in set. <br><br> <b>Preview:</b> {{#if this.questions.[0]}} <br> {{this.questions.[0].q_text}} {{else}} No questions in set, <br> please click to add : ) {{/if}} {{#if this.questions.[1]}} <br> {{this.questions.[1].q_text}} {{/if}}  {{#if this.questions.[2]}} <br> {{this.questions.[2].q_text}} {{/if}}  {{#if this.questions.[3]}} <br>      {{/if}}'
+   var template = Handlebars.compile(newHTML);
+   $('#pre5').html('<a id="pre{{index}}" href="javascript:void(0);" onclick="preview{{index}}()"><b> View More </b></a>')
+   $(".versionb5").html(template(data.quizset[4]));
+
+});
+
+  }
+
 }
 
 
