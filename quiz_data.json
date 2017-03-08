@@ -1,1 +1,173 @@
-{"quizset":[{"url":"actualshow1","addurl":"adding1","scheduleurl":"schedule1","send":"send1","activate":"act1","index":"1","name":"Set I","status":"active","num_question":5,"log":[],"questions":[{"qurl":"ques/1/1","q_text":"critical test","a_text":"yeah important"},{"qurl":"ques/2/1","q_text":"New Testing question","a_text":"yo"},{"qurl":"ques/3/1","q_text":"Corner case test","a_text":"yo"},{"qurl":"ques/4/1","q_text":"When light bends as it enters a different medium the process is known as what?","a_text":"refraction"},{"qurl":"ques/5/1","q_text":"A magnifying glass is what type of lens?","a_text":"convex"}]},{"url":"actualshow2","addurl":"adding2","scheduleurl":"schedule2","send":"send2","activate":"act2","index":"2","name":"Set II","status":"active","num_question":8,"log":[],"questions":[{"qurl":"ques/1/2","q_text":"The chemical element uranium was named after what planet?","a_text":"uranus"},{"qurl":"ques/2/2","q_text":"What is the earth’s primary source of energy?","a_text":"the sun"},{"qurl":"ques/3/2","q_text":"Electric current is typically measured in what units?","a_text":"Amperes"},{"qurl":"ques/4/2","q_text":"Stratus, cirrus, cumulus and nimbus are types of what?","a_text":"Clouds"},{"qurl":"ques/5/2","q_text":"An anemometer is used to measure what?","a_text":"Wind speed"},{"qurl":"ques/6/2","q_text":"At what temperature is Centigrade equal to Fahrenheit?","a_text":"-40 degrees"},{"qurl":"ques/7/2","q_text":"What is the driest desert on Earth, the Sahara, the Kalahari or the Atacama?","a_text":"The Atacama Desert"},{"qurl":"ques/8/2","q_text":"aaa","a_text":"qqqq"}]},{"url":"actualshow3","addurl":"adding3","scheduleurl":"schedule3","send":"send3","activate":"act3","index":"3","name":"Set III","status":null,"num_question":4,"log":[],"questions":[{"qurl":"ques/1/3","q_text":"even more","a_text":"yay"},{"qurl":"ques/2/3","q_text":"more question","a_text":"more more more"},{"qurl":"ques/3/3","q_text":"What is a dog’s most powerful sense?","a_text":"smell"},{"qurl":"ques/4/3","q_text":"Because of dogs unique relationship with humans they are often referred to as man’s best........?","a_text":"friend"}]},{"url":"actualshow4","addurl":"adding4","scheduleurl":"schedule4","send":"send4","activate":"act4","index":"4","name":"Set IV","status":null,"num_question":1,"log":[],"questions":[{"qurl":"ques/1/4","q_text":"What is the name of a place that uses telescopes and other scientific equipment to research space and astronomy?","a_text":"An Observatory"}]},{"url":"actualshow5","addurl":"adding5","scheduleurl":"schedule5","send":"send5","activate":"act5","index":"5","name":"Set V","status":"active","num_question":1,"log":[],"questions":[{"qurl":"ques/1/5","q_text":"what is this set for ? ","a_text":"Testing !!!"}]}],"current_question":"Who is the coolest person in the world ?","current_answer":"no_question","user_phone":"18587661874","log":[]}
+{
+  "quizset": [
+    {
+      "url": "actualshow1",
+      "addurl": "adding1",
+      "scheduleurl": "schedule1",
+      "send": "send1",
+      "activate": "act1",
+      "index": "1",
+      "name": "Set I",
+      "status": "active",
+      "num_question": 5,
+      "log": [],
+      "questions": [
+        {
+          "qurl": "ques/1/1",
+          "q_text": "critical test",
+          "a_text": "yeah important"
+        },
+        {
+          "qurl": "ques/2/1",
+          "q_text": "New Testing question",
+          "a_text": "yo"
+        },
+        {
+          "qurl": "ques/3/1",
+          "q_text": "Corner case test",
+          "a_text": "yo"
+        },
+        {
+          "qurl": "ques/4/1",
+          "q_text": "When light bends as it enters a different medium the process is known as what?",
+          "a_text": "refraction"
+        },
+        {
+          "qurl": "ques/5/1",
+          "q_text": "A magnifying glass is what type of lens?",
+          "a_text": "convex"
+        }
+      ]
+    },
+    {
+      "url": "actualshow2",
+      "addurl": "adding2",
+      "scheduleurl": "schedule2",
+      "send": "send2",
+      "activate": "act2",
+      "index": "2",
+      "name": "Set II",
+      "status": "active",
+      "num_question": 8,
+      "log": [],
+      "questions": [
+        {
+          "qurl": "ques/1/2",
+          "q_text": "The chemical element uranium was named after what planet?",
+          "a_text": "uranus"
+        },
+        {
+          "qurl": "ques/2/2",
+          "q_text": "What is the earth’s primary source of energy?",
+          "a_text": "the sun"
+        },
+        {
+          "qurl": "ques/3/2",
+          "q_text": "Electric current is typically measured in what units?",
+          "a_text": "Amperes"
+        },
+        {
+          "qurl": "ques/4/2",
+          "q_text": "Stratus, cirrus, cumulus and nimbus are types of what?",
+          "a_text": "Clouds"
+        },
+        {
+          "qurl": "ques/5/2",
+          "q_text": "An anemometer is used to measure what?",
+          "a_text": "Wind speed"
+        },
+        {
+          "qurl": "ques/6/2",
+          "q_text": "At what temperature is Centigrade equal to Fahrenheit?",
+          "a_text": "-40 degrees"
+        },
+        {
+          "qurl": "ques/7/2",
+          "q_text": "What is the driest desert on Earth, the Sahara, the Kalahari or the Atacama?",
+          "a_text": "The Atacama Desert"
+        },
+        {
+          "qurl": "ques/8/2",
+          "q_text": "aaa",
+          "a_text": "qqqq"
+        }
+      ]
+    },
+    {
+      "url": "actualshow3",
+      "addurl": "adding3",
+      "scheduleurl": "schedule3",
+      "send": "send3",
+      "activate": "act3",
+      "index": "3",
+      "name": "Set III",
+      "status": null,
+      "num_question": 4,
+      "log": [],
+      "questions": [
+        {
+          "qurl": "ques/1/3",
+          "q_text": "even more",
+          "a_text": "yay"
+        },
+        {
+          "qurl": "ques/2/3",
+          "q_text": "more question",
+          "a_text": "more more more"
+        },
+        {
+          "qurl": "ques/3/3",
+          "q_text": "What is a dog’s most powerful sense?",
+          "a_text": "smell"
+        },
+        {
+          "qurl": "ques/4/3",
+          "q_text": "Because of dogs unique relationship with humans they are often referred to as man’s best........?",
+          "a_text": "friend"
+        }
+      ]
+    },
+    {
+      "url": "actualshow4",
+      "addurl": "adding4",
+      "scheduleurl": "schedule4",
+      "send": "send4",
+      "activate": "act4",
+      "index": "4",
+      "name": "Set IV",
+      "status": null,
+      "num_question": 1,
+      "log": [],
+      "questions": [
+        {
+          "qurl": "ques/1/4",
+          "q_text": "What is the name of a place that uses telescopes and other scientific equipment to research space and astronomy?",
+          "a_text": "An Observatory"
+        }
+      ]
+    },
+    {
+      "url": "actualshow5",
+      "addurl": "adding5",
+      "scheduleurl": "schedule5",
+      "send": "send5",
+      "activate": "act5",
+      "index": "5",
+      "name": "Set V",
+      "status": "active",
+      "num_question": 1,
+      "log": [],
+      "questions": [
+        {
+          "qurl": "ques/1/5",
+          "q_text": "what is this set for ? ",
+          "a_text": "Testing !!!"
+        }
+      ]
+    }
+  ],
+  "current_question": "Who is the coolest person in the world ?",
+  "current_answer": "no_question",
+  "user_phone": "",
+  "log": []
+}
