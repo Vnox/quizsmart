@@ -229,6 +229,12 @@ function preview5(){
 }
 
 
+function setClick(){
+  console.log("Set click event sent")
+  ga("send", "event", "enter", "button");
+}
+
+
 
 
 

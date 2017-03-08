@@ -72,7 +72,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </div> -->
 
 {{#each quizset}}
-  <a href={{url}}  class="cardwrapper">
+  <a href={{url}} onclick="setClick()" class="cardwrapper">
   <div class="card">
   <div class="cardheader">
   <p><b> {{name}} </b></p>
