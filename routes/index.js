@@ -5,6 +5,21 @@
 
 var data = require("../quiz_data.json");
 
+exports.view_random = function(req, res){
+var ran = Math.random()*10;
+ran = Math.floor(ran)
+console.log(ran)
+if(ran % 2 == 0){
+  exports.view(req, res)
+}else{
+  exports.view_b(req, res)
+}
+
+
+}
+
+
+
 exports.view = function(req, res){
   console.log(data);
   delete require.cache[require.resolve('../quiz_data.json')];
