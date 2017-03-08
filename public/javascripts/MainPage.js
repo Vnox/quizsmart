@@ -84,6 +84,7 @@ var clicked5 = false;
 function preview1(){
 
   console.log("prev 1 called")
+  ga("send", "event", "preview", "button");
   if(clicked1 == false){
     clicked1 = true;
      $.getJSON( "/getdata", function( data ) {
@@ -113,6 +114,7 @@ function preview1(){
 function preview2(){
 
   console.log("prev 2 called")
+  ga("send", "event", "preview", "button");
   if(clicked2 == false){
     clicked2 = true;
      $.getJSON( "/getdata", function( data ) {
@@ -144,6 +146,7 @@ function preview2(){
 function preview3(){
 
   console.log("prev 3 called")
+  ga("send", "event", "preview", "button");
   if(clicked3 == false){
     clicked3 = true;
      $.getJSON( "/getdata", function( data ) {
@@ -173,6 +176,7 @@ function preview3(){
 function preview4(){
 
   console.log("prev 4 called")
+  ga("send", "event", "preview", "button");
   if(clicked4 == false){
     clicked4 = true;
      $.getJSON( "/getdata", function( data ) {
@@ -202,6 +206,8 @@ function preview4(){
 function preview5(){
 
   console.log("prev 5 called")
+  ga("send", "event", "preview", "button");
+
   if(clicked5 == false){
     clicked5 = true;
      $.getJSON( "/getdata", function( data ) {
@@ -233,6 +239,13 @@ function setClick(){
   console.log("Set click event sent")
   ga("send", "event", "enter", "button");
 }
+
+function buttonClick(){
+  console.log("Button click event sent")
+  ga("send", "event", "enter", "button");
+}
+
+
 
 
 
