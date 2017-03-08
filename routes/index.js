@@ -5,18 +5,16 @@
 
 var data = require("../quiz_data.json");
 
-exports.view_random = function(req, res){
-var ran = Math.random()*10;
-ran = Math.floor(ran)
-console.log(ran)
-if(ran % 2 == 0){
-  exports.view(req, res)
-}else{
-  exports.view_b(req, res)
-}
-
-
-}
+// exports.view_random = function(req, res){
+// var ran = Math.random()*1000;
+// ran = Math.floor(ran)
+// console.log(ran)
+// if(ran % 2 == 0){
+//   exports.view(req, res)
+// }else{
+//   exports.view_b(req, res)
+// }
+// }
 
 
 
