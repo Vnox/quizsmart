@@ -58,7 +58,7 @@ function cardClick(e) {
 function add(e){
   console.log(e)
   console.log("ADD CALLED")
-  var newHTML = '<form role="form" method="get" action="' + e +'">' +'<div class="adding">' + '<div>' +'<label for="name">Question:</label>' +'<input type="text" class="inputbox gr" id="new_ques" placeholder="Enter quiz question here" name="new_ques">' +'</div>' +'<div>' +'<label for="description">Answer:</label>' +'<input type="text" class="inputbox gr" id="new_answer" placeholder="Enter answer here" name="new_answer">' +'</div>' +'<input type="submit" class="inputbox submitbox"  value="Add New Question : )"></input>' +'</div>' + '</form>' 
+  var newHTML = '<form role="form" method="get" action="' + e +'">' +'<div class="adding">' + '<div>' +'<label for="name">Question:</label>' +'<input type="text" class="inputbox gr" id="new_ques" placeholder="Enter quiz question here" name="new_ques">' +'</div>' +'<div>' +'<label for="description">Answer:</label>' +'<input type="text" class="inputbox gr" id="new_answer" placeholder="Enter answer here" name="new_answer">' +'</div>' +'<input type="submit" class="inputbox submitbox"  value="Add New Question"></input>' +'</div>' + '</form>' 
   $('#sabuttonrev').html(newHTML);
   $('#sabuttonrev').css('background-color', 'clear');
 }
