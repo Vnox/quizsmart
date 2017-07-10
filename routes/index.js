@@ -22,7 +22,7 @@ exports.view = function(req, res){
   console.log(data);
   delete require.cache[require.resolve('../quiz_data.json')];
   data = require("../quiz_data.json");
-  res.render('index', data);
+  res.render('index_i', data);
 };
 
 exports.view_b = function(req, res){

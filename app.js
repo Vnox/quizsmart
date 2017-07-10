@@ -49,7 +49,7 @@ app.get('/index', index.view);
 app.get('/index_a', index.view);
 app.get('/index_b', index.view_b);
 // app.get('/index_r', index.view_random)
-app.get('/', index.login);
+app.get('/', index.view);
 app.get('/faq', index.faq);
 app.get('/addnewquiz', addnewquiz.showQuizSet);
 app.get('/settings', settings.view);
