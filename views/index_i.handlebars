@@ -72,7 +72,7 @@ body{
   <div>
     <form>
       <!-- <label for="fname">First Name</label> -->
-      <input type="text" id="fname" name="fname" style=" position:absolute; left: 100px ;top:30px; display:inline-block; z-index:10; width: 130px; " placeholder="Your Email">
+      <input class="whatever" type="text" id="fname" name="fname" style=" position:absolute; left: 100px ;top:30px; display:inline-block; z-index:10; width: 130px; " placeholder="Your Email">
 
       <button onclick="myFunction()" style=" position:absolute; left: 240px ;top:30px; display:inline-block; z-index:10; background-color: #18364B; /* Green */
         border: none;
@@ -84,16 +84,16 @@ body{
     <script>
       function myFunction() {
 
-        Bmob.initialize("e20bc3f72a62d7b8f33e7720710ccdcf", "c6b64882795dad864f7eb5b8a41eef94");
+        window.alert($(".whatever").val() + ' has been sent. ');
 
-    
+        Bmob.initialize("e20bc3f72a62d7b8f33e7720710ccdcf", "c6b64882795dad864f7eb5b8a41eef94");
         var EmailObject = Bmob.Object.extend("Emails");
         var emailObject = new EmailObject();
-        emailObject.set("value", "359234484@qq.com");
+        emailObject.set("value", $(".whatever").val());
         emailObject.save(null, {
           success: function(object) {
-            window.alert(1);
-            // $(".success").show();
+            
+            
           },
           error: function(model, error) {
             window.alert(0);
