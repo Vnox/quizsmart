@@ -7,6 +7,7 @@
 <script type="text/javascript" src="javascripts/bmob-min.js"></script>
 
 <head>
+<title>Irene</title>
 <style>
 
 .containerBox {
@@ -74,28 +75,27 @@ body{
   <div>
     <form>
       <!-- <label for="fname">First Name</label> -->
-      <input class="whatever" type="text" id="fname" name="fname" style=" position:absolute; left: 80px ;top:30px; display:inline-block; z-index:10; width: 130px; " placeholder="Your Email">
+      <input class="whatever" type="text" id="fname" name="fname" style=" position:absolute; left: 80px ;top:30px; display:inline-block; z-index:10; width: 130px; border-radius: 25px; 
+      border: 0px solid #777; padding: 3px;" placeholder="    Your Email">
 
-      <button onclick="myFunction()" style=" position:absolute; left: 230px ;top:30px; display:inline-block; z-index:10; background-color: #18364B; /* Green */
+      <button onclick="myFunction()" style=" position:absolute; left: 230px ;top:30px; display:inline-block; z-index:10; background-color: #FFFFFF; /* Green */
+        color: #000000;
         border: none;
-        color: white;
         padding: 3px 32px;
         text-align: center;
-        text-decoration: none;" >Submit</button>
+        text-decoration: none;
+        border-radius: 25px;" >Subscribe Now</button>
 
     <script>
       function myFunction() {
 
         window.alert($(".whatever").val() + ' has been sent. ');
-
         Bmob.initialize("e20bc3f72a62d7b8f33e7720710ccdcf", "c6b64882795dad864f7eb5b8a41eef94");
         var EmailObject = Bmob.Object.extend("Emails");
         var emailObject = new EmailObject();
         emailObject.set("value", $(".whatever").val());
         emailObject.save(null, {
           success: function(object) {
-            
-            
           },
           error: function(model, error) {
             window.alert(0);
